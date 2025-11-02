@@ -10,8 +10,8 @@ import {
     MobileNavMenu,
     MobileNavToggle,
     NavbarLogo,
-    NavbarButton,
 } from "./Navbar";
+import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -34,19 +34,20 @@ const Header = () => {
             <NavBody>
                 <NavbarLogo />
                 <NavItems items={navItems} onItemClick={handleItemClick} />
-                <NavbarButton href="/contact" variant="gradient">
-                    Get Started
-                </NavbarButton>
+                <AnimatedThemeToggler />
             </NavBody>
 
             {/* Mobile Navigation */}
             <MobileNav>
                 <MobileNavHeader>
                     <NavbarLogo />
-                    <MobileNavToggle
-                        isOpen={isOpen}
-                        onClick={() => setIsOpen(!isOpen)}
-                    />
+                    <div className="flex items-center gap-3">
+                        <AnimatedThemeToggler />
+                        <MobileNavToggle
+                            isOpen={isOpen}
+                            onClick={() => setIsOpen(!isOpen)}
+                        />
+                    </div>
                 </MobileNavHeader>
 
                 <MobileNavMenu isOpen={isOpen} onClose={() => setIsOpen(false)}>
@@ -60,11 +61,6 @@ const Header = () => {
                             {item.name}
                         </a>
                     ))}
-                    <div className="w-full pt-4">
-                        <NavbarButton href="/contact" variant="gradient">
-                            Get Started
-                        </NavbarButton>
-                    </div>
                 </MobileNavMenu>
             </MobileNav>
         </Navbar>
