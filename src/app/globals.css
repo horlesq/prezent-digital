@@ -13,21 +13,6 @@ body::-webkit-scrollbar {
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
-    --color-background: #ffffff;
-    --color-primary: #e94e1b;
-    --color-secondary: #2a84d2;
-}
-
-/* Class-based dark mode support */
-.dark {
-    @theme {
-        --color-background: #0a0a0a;
-        --color-primary: #f97316;
-        --color-secondary: #3b82f6;
-    }
-}
-
 /* Smooth theme transitions */
 html {
     color-scheme: light dark;
@@ -35,21 +20,17 @@ html {
 }
 
 /* Optimized theme transitions - only for color-related properties */
-*,
-*::before,
-*::after {
-    transition-property: background-color, border-color, color, fill, stroke;
-    transition-duration: 200ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.theme-transition {
+    transition: background-color .3s ease-in-out,
+                border-color 0.3s ease-in-out,
+                color 0.3s ease-in-out;
 }
 
-/* Exclude elements that shouldn't transition */
-svg,
-img,
-video,
-canvas,
-iframe {
-    transition-property: none;
+/* Use modern View Transitions API for theme switching */
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        view-transition-name: root;
+    }
 }
 
 @layer components {
@@ -58,7 +39,7 @@ iframe {
         width: 60px;
         aspect-ratio: 1;
         border-radius: 50%;
-        border: 8px solid theme("colors.primary");
+        border: 8px solid theme("colors.blue.600");
         border-right-color: transparent;
         animation: rotate 1s infinite linear;
     }
@@ -68,9 +49,14 @@ iframe {
         width: 20px;
         aspect-ratio: 1;
         border-radius: 50%;
-        border: 2px solid theme("colors.primary");
+        border: 2px solid theme("colors.blue.600");
         border-right-color: transparent;
         animation: rotate 1s infinite linear;
+    }
+
+    .dark .spinner,
+    .dark .spinner-mini {
+        border-color: theme("colors.blue.400");
     }
 
     @keyframes rotate {

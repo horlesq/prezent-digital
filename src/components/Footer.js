@@ -10,16 +10,16 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="bg-gray-50 border-t border-gray-200 mt-auto px-4 sm:px-6 lg:px-8">
+        <footer className="bg-white dark:bg-neutral-950 mt-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto py-8 ">
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
                     <div className="flex-1">
                         <div className="flex items-center gap-2 mb-4">
-                            <span className="text-xl font-bold text-gray-900">
+                            <span className="text-xl font-bold text-neutral-900 dark:text-neutral-50">
                                 prezent.digital
                             </span>
                         </div>
-                        <p className="text-gray-600 text-sm leading-relaxed max-w-md">
+                        <p className="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed max-w-md">
                             Your personal recipe generator. Use Artificial
                             Intelligence to instantly create unique recipes and
                             culinary suggestions from the ingredients you have
@@ -28,7 +28,7 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="text-gray-900 font-semibold text-sm mb-4">
+                        <h3 className="text-blue-600 dark:text-blue-400 font-semibold text-sm mb-4">
                             Quick Links
                         </h3>
                         <ul className="space-y-2">
@@ -36,7 +36,7 @@ export default function Footer() {
                                 <li key={link.href}>
                                     <Link
                                         href={link.href}
-                                        className="text-gray-600 hover:text-primary text-sm transition-colors"
+                                        className="text-neutral-600 dark:text-neutral-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors"
                                     >
                                         {link.label}
                                     </Link>
@@ -46,19 +46,19 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="border-t border-gray-200 pt-6 mt-6">
+                <div className="pt-6 mt-6">
                     <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-                        <p className="text-gray-500 text-sm">
-                            © {new Date().getFullYear()} prezent.digital All rights
-                            reserved.
+                        <p className="text-neutral-500 dark:text-neutral-400 text-sm">
+                            © {new Date().getFullYear()} prezent.digital All
+                            rights reserved.
                         </p>
-                        <div className="flex items-center gap-2 text-gray-500 text-sm">
+                        <div className="flex items-center gap-2 text-neutral-500 dark:text-neutral-400 text-sm">
                             <span>Created by</span>
                             <a
                                 href="https://horly.dev/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-primary hover:text-secondary font-medium transition-colors"
+                                className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
                             >
                                 Horly
                             </a>
