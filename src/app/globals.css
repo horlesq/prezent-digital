@@ -21,9 +21,8 @@ html {
 
 /* Optimized theme transitions - only for color-related properties */
 .theme-transition {
-    transition: background-color .3s ease-in-out,
-                border-color 0.3s ease-in-out,
-                color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
 }
 
 /* Use modern View Transitions API for theme switching */
@@ -34,6 +33,10 @@ html {
 }
 
 @layer components {
+    .page-container {
+        @apply max-w-xl lg:max-w-4xl mx-auto space-y-12 pb-16 md:pb-24 lg:pb-32;
+    }
+
     .spinner {
         margin: 3.2rem auto 1.6rem;
         width: 60px;

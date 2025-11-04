@@ -10,7 +10,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="bg-white dark:bg-neutral-950 mt-auto px-4 sm:px-6 lg:px-8">
+        <footer className="bg-neutral-50 dark:bg-neutral-950 mt-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto py-8 ">
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
                     <div className="flex-1">

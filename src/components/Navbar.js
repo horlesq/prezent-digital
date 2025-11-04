@@ -173,9 +173,15 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }) => {
 
 export const MobileNavToggle = ({ isOpen, onClick }) => {
     return isOpen ? (
-        <X className="text-neutral-900 dark:text-neutral-50" onClick={onClick} />
+        <X
+            className="text-neutral-900 dark:text-neutral-50"
+            onClick={onClick}
+        />
     ) : (
-        <Menu className="text-neutral-900 dark:text-neutral-50" onClick={onClick} />
+        <Menu
+            className="text-neutral-900 dark:text-neutral-50"
+            onClick={onClick}
+        />
     );
 };
 
@@ -185,7 +191,22 @@ export const NavbarLogo = () => {
             href="/"
             className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-neutral-900 dark:text-neutral-50"
         >
-            <Image src="/assets/logo.png" alt="logo" width={30} height={30} />
+            {/* Light mode logo */}
+            <Image
+                src="/assets/logo-light.png"
+                alt="logo"
+                width={30}
+                height={30}
+                className="dark:hidden"
+            />
+            {/* Dark mode logo */}
+            <Image
+                src="/assets/logo-dark.png"
+                alt="logo"
+                width={30}
+                height={30}
+                className="hidden dark:block"
+            />
             <span className="font-semibold text-neutral-900 dark:text-neutral-50">
                 Prezent Digital
             </span>
@@ -207,7 +228,8 @@ export const NavbarButton = ({
     const variantStyles = {
         primary:
             "shadow-[0_0_24px_rgba(34,42,53,0.06),_0_1px_1px_rgba(34,42,53,0.05),_0_0_0_1px_rgba(34,42,53,0.04),_0_0_4px_rgba(34,42,53,0.08),_0_16px_68px_rgba(34,42,53,0.05),_0_1px_0_rgba(255,255,255,0.1)_inset]",
-        secondary: "bg-transparent shadow-none text-neutral-900 dark:text-neutral-50",
+        secondary:
+            "bg-transparent shadow-none text-neutral-900 dark:text-neutral-50",
         dark: "bg-neutral-900 dark:bg-white text-neutral-50 dark:text-neutral-900 shadow-[0_0_24px_rgba(34,42,53,0.06),_0_1px_1px_rgba(34,42,53,0.05),_0_0_0_1px_rgba(34,42,53,0.04),_0_0_4px_rgba(34,42,53,0.08),_0_16px_68px_rgba(34,42,53,0.05),_0_1px_0_rgba(255,255,255,0.1)_inset]",
         gradient:
             "bg-gradient-to-b from-blue-600 to-blue-500 dark:from-blue-500 dark:to-blue-400 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
