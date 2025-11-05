@@ -34,7 +34,7 @@ html {
 
 @layer components {
     .page-container {
-        @apply max-w-xl lg:max-w-4xl mx-auto space-y-12 pb-16 md:pb-24 lg:pb-32;
+        @apply max-w-xl lg:max-w-5xl mx-auto px-4 space-y-12 pb-16 md:pb-24 lg:pb-32;
     }
 
     .spinner {

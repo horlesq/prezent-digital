@@ -17,7 +17,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const navItems = [
-        { name: "Home", link: "/" },
+        { name: "Acasa", link: "/" },
         { name: "Services", link: "/services" },
         { name: "Portfolio", link: "/portfolio" },
         { name: "About", link: "/about" },
