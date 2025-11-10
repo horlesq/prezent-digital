@@ -7,11 +7,11 @@ module.exports = {
         "./app/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/**/*.{js,ts,jsx,tsx,mdx}",
     ],
-    
+
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Inter", "system-ui", "sans-serif"],
+                sans: ["Rubik", "system-ui", "sans-serif"],
             },
         },
     },

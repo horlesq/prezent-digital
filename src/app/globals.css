@@ -13,6 +13,31 @@ body::-webkit-scrollbar {
 
 @custom-variant dark (&:is(.dark *));
 
+:root {
+    --background: oklch(1 0 0); /* white */
+    --foreground: oklch(14.5% 0 0); /* neutral-950 */
+    --muted: oklch(90% 0 0); /* neutral-200 */
+    --muted-foreground: oklch(45% 0 0); /* neutral-600 */
+    --primary: oklch(58.6% 0.253 17.585); /* rose-600 */
+    --background-footer: oklch(98.5% 0.001 106.423);
+}
+.dark {
+    --background: oklch(14.5% 0 0); /* neutral-950 */
+    --foreground: oklch(98% 0 0); /* white */
+    --muted: oklch(20% 0 0); /* neutral-800 */
+    --muted-foreground: oklch(70% 0 0); /* neutral-400 */
+    --primary: oklch(71.2% 0.194 13.428); /* rose-400 */
+    --background-footer: oklch(0 0 0); /* black */
+}
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-primary: var(--primary);
+    --color-background-footer: var(--background-footer);
+}
+
 /* Smooth theme transitions */
 html {
     color-scheme: light dark;
