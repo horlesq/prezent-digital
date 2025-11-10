@@ -4,13 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
+import { CONTENT } from "@/lib/content"; // Importă contentul
 
 export default function Footer() {
-    const footerLinks = [
-        { href: "/", label: "Acasa" },
-        { href: "/despre", label: "Despre" },
-        { href: "/contact", label: "Contact" },
-    ];
+    const { footer } = CONTENT;
 
     return (
         <footer className="bg-background-footer mt-auto px-4 sm:px-6 lg:px-8">
@@ -35,20 +32,20 @@ export default function Footer() {
                                 className="hidden dark:block"
                             />
                             <span className="text-xl font-bold text-primary">
-                                Prezent Digital
+                                {footer.companyName}
                             </span>
                         </div>
                         <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
-                            Crestem afaceri prin solutii digitale.
+                            {footer.tagline}
                         </p>
                     </div>
 
                     <div>
-                        <h3 className="text-primary font-semibold text-sm mb-4">
-                            Meniu Rapid
+                        <h3 className="text-primary font-semibold text-sm mb-2">
+                            {footer.quickLinks}
                         </h3>
-                        <ul className="space-y-2">
-                            {footerLinks.map((link) => (
+                        <ul className="space-y-1">
+                            {footer.links.map((link) => (
                                 <li key={link.href}>
                                     <Link
                                         href={link.href}
@@ -65,21 +62,21 @@ export default function Footer() {
                 <div className="pt-6 mt-6 border-t border-muted">
                     <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
                         <p className="text-muted-foreground text-xs">
-                            © {new Date().getFullYear()} Prezent Digital All
-                            rights reserved.
+                            © {new Date().getFullYear()} {footer.companyName}{" "}
+                            {footer.copyright}
                         </p>
                         <div className="flex items-center gap-4">
                             <Link
                                 href="/privacy-policy"
                                 className="text-muted-foreground hover:text-primary text-xs transition-colors"
                             >
-                                Privacy Policy
+                                {footer.privacy}
                             </Link>
                             <Link
                                 href="/terms-of-service"
                                 className="text-muted-foreground hover:text-primary text-xs transition-colors"
                             >
-                                Terms of Service
+                                {footer.terms}
                             </Link>
                         </div>
                     </div>
@@ -89,7 +86,7 @@ export default function Footer() {
                             href="https://facebook.com/prezentdigital"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-primary transition-colors"
+                            className="text-foreground hover:text-primary transition-colors"
                             aria-label="Facebook"
                         >
                             <Facebook className="h-5 w-5" />
@@ -98,7 +95,7 @@ export default function Footer() {
                             href="https://instagram.com/prezentdigital"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-primary transition-colors"
+                            className="text-foreground hover:text-primary transition-colors"
                             aria-label="Instagram"
                         >
                             <Instagram className="h-5 w-5" />
@@ -107,7 +104,7 @@ export default function Footer() {
                             href="https://tiktok.com/@prezentdigital"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-primary transition-colors"
+                            className="text-foreground hover:text-primary transition-colors"
                             aria-label="TikTok"
                         >
                             <svg
@@ -122,7 +119,7 @@ export default function Footer() {
                             href="https://linkedin.com/company/prezentdigital"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-primary transition-colors"
+                            className="text-foreground hover:text-primary transition-colors"
                             aria-label="LinkedIn"
                         >
                             <Linkedin className="h-5 w-5" />

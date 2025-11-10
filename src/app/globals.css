@@ -22,22 +22,21 @@ html {
 
 :root {
     /* Light theme variables */
-    --background: oklch(1 0 0);
-    --foreground: oklch(14.5% 0 0);
-    --muted: oklch(90% 0 0);
-    --muted-foreground: oklch(45% 0 0);
-    --primary: oklch(58.6% 0.253 17.585);
-    --background-footer: oklch(98.5% 0.001 106.423);
+    --background: oklch(1 0 0); /* white */
+    --foreground: oklch(14.5% 0 0); /* neutral-950 */
+    --muted: oklch(92.2% 0 0); /* neutral-200 */
+    --muted-foreground: oklch(43.9% 0 0); /* neutral-600 */
+    --primary: oklch(58.6% 0.253 17.585); /* rose-600 */
 }
 
 .dark {
     /* Dark theme variables */
-    --background: oklch(14.5% 0 0);
-    --foreground: oklch(98% 0 0);
-    --muted: oklch(20% 0 0);
-    --muted-foreground: oklch(70% 0 0);
-    --primary: oklch(71.2% 0.194 13.428);
-    --background-footer: oklch(0 0 0);
+    --background: oklch(14.5% 0 0); /* neutral-950 */
+    --foreground: oklch(98% 0 0); /* white */
+    --muted: oklch(26.9% 0 0); /* neutral-800 */
+    --muted-foreground: oklch(70.8% 0 0); /* neutral-400 */
+    --primary: oklch(71.2% 0.194 13.428); /* rose-400 */
+    --background-footer: oklch(0 0 0); /* black */
 }
 
 /* ===== Tailwind Theme Configuration ===== */

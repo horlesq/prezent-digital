@@ -12,17 +12,11 @@ import {
     NavbarLogo,
 } from "./Navbar";
 import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
+import { CONTENT } from "@/lib/content";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
-
-    const navItems = [
-        { name: "Acasa", link: "/" },
-        { name: "Services", link: "/services" },
-        { name: "Portfolio", link: "/portfolio" },
-        { name: "About", link: "/about" },
-        { name: "Contact", link: "/contact" },
-    ];
+    const { nav } = CONTENT;
 
     const handleItemClick = () => {
         setIsOpen(false);
@@ -33,7 +27,7 @@ const Header = () => {
             {/* Desktop Navigation */}
             <NavBody>
                 <NavbarLogo />
-                <NavItems items={navItems} onItemClick={handleItemClick} />
+                <NavItems items={nav.items} onItemClick={handleItemClick} />
                 <AnimatedThemeToggler />
             </NavBody>
 
@@ -51,7 +45,7 @@ const Header = () => {
                 </MobileNavHeader>
 
                 <MobileNavMenu isOpen={isOpen} onClose={() => setIsOpen(false)}>
-                    {navItems.map((item, idx) => (
+                    {nav.items.map((item, idx) => (
                         <a
                             key={`mobile-link-${idx}`}
                             href={item.link}
