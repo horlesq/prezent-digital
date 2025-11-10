@@ -20,7 +20,7 @@ function StackItem({ children }) {
     return (
         <div
             className={
-                "mx-4 w-12 h-12 flex items-center justify-center text-neutral-800 dark:text-neutral-100 transition-all duration-300 opacity-75 hover:scale-125 hover:opacity-100"
+                "mx-4 w-12 h-12 flex items-center justify-center text-foreground transition-all duration-300 opacity-75 hover:scale-125 hover:opacity-100"
             }
         >
             {children}
@@ -30,7 +30,7 @@ function StackItem({ children }) {
 
 export default function HeroSection() {
     return (
-        <div className="relative  flex items-center justify-center overflow-hidden bg-white dark:bg-neutral-950">
+        <div className="relative flex items-center justify-center overflow-hidden bg-background">
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 <div className="text-center space-y-8">
                     {/* Badge */}
@@ -38,10 +38,10 @@ export default function HeroSection() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm border border-rose-200/50 dark:border-rose-800/50 shadow-lg"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/80 backdrop-blur-sm border border-primary/50 shadow-lg"
                     >
-                        <Sparkles className="w-4 h-4 text-rose-600 dark:text-rose-400" />
-                        <span className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+                        <Sparkles className="w-4 h-4 text-primary" />
+                        <span className="text-sm font-medium text-foreground">
                             Soluții Web Personalizate
                         </span>
                     </motion.div>
@@ -54,15 +54,15 @@ export default function HeroSection() {
                         className="space-y-4"
                     >
                         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight">
-                            <span className="bg-gradient-to-r from-neutral-900 via-rose-600 to-neutral-900 dark:from-neutral-100 dark:via-rose-400 dark:to-neutral-100 bg-clip-text text-transparent">
+                            <span className="bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
                                 Creștem Afaceri
                             </span>
                             <br />
-                            <span className="text-neutral-900 dark:text-neutral-100">
+                            <span className="text-foreground">
                                 Prin Soluții Digitale
                             </span>
                         </h1>
-                        <p className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                             Construim website-uri moderne și platforme digitale
                             care transformă vizibilitatea online a businessului
                             tău. De la idee la lansare, suntem partenerul tău în
@@ -79,14 +79,14 @@ export default function HeroSection() {
                     >
                         <a
                             href="/contact"
-                            className="group relative px-8 py-4 bg-rose-600 hover:bg-rose-700 dark:bg-rose-500 dark:hover:bg-rose-600 text-white rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                            className="group relative px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
                         >
                             Pornește-ți proiectul acum
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </a>
                         <a
                             href="/portfolio"
-                            className="px-8 py-4 bg-white/80 hover:bg-white dark:bg-neutral-900/80 dark:hover:bg-neutral-900 text-neutral-900 dark:text-neutral-100 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 backdrop-blur-sm border border-neutral-200 dark:border-neutral-800"
+                            className="px-8 py-4 bg-background/80 hover:bg-background text-foreground rounded-xl font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 backdrop-blur-sm border border-muted"
                         >
                             Vezi Portofoliu
                         </a>
@@ -106,10 +106,10 @@ export default function HeroSection() {
                         ].map((feature, idx) => (
                             <div
                                 key={idx}
-                                className="flex items-center gap-2 px-4 py-2 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-full border border-neutral-200/50 dark:border-neutral-800/50"
+                                className="flex items-center gap-2 px-4 py-2 bg-background/60 backdrop-blur-sm rounded-full border border-muted/50"
                             >
-                                <feature.icon className="w-4 h-4 text-rose-600 dark:text-rose-400" />
-                                <span className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+                                <feature.icon className="w-4 h-4 text-primary" />
+                                <span className="text-sm font-medium text-foreground">
                                     {feature.text}
                                 </span>
                             </div>

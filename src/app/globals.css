@@ -1,34 +1,46 @@
 @import "tailwindcss";
 
-/* Hide scrollbar for all browsers */
+/* ===== CSS Reset & Base Styles ===== */
 html,
 body {
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
+
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
     display: none;
 }
 
+html {
+    color-scheme: light dark;
+    scroll-behavior: smooth;
+}
+
+/* ===== CSS Custom Properties (Variables) ===== */
 @custom-variant dark (&:is(.dark *));
 
 :root {
-    --background: oklch(1 0 0); /* white */
-    --foreground: oklch(14.5% 0 0); /* neutral-950 */
-    --muted: oklch(90% 0 0); /* neutral-200 */
-    --muted-foreground: oklch(45% 0 0); /* neutral-600 */
-    --primary: oklch(58.6% 0.253 17.585); /* rose-600 */
+    /* Light theme variables */
+    --background: oklch(1 0 0);
+    --foreground: oklch(14.5% 0 0);
+    --muted: oklch(90% 0 0);
+    --muted-foreground: oklch(45% 0 0);
+    --primary: oklch(58.6% 0.253 17.585);
     --background-footer: oklch(98.5% 0.001 106.423);
 }
+
 .dark {
-    --background: oklch(14.5% 0 0); /* neutral-950 */
-    --foreground: oklch(98% 0 0); /* white */
-    --muted: oklch(20% 0 0); /* neutral-800 */
-    --muted-foreground: oklch(70% 0 0); /* neutral-400 */
-    --primary: oklch(71.2% 0.194 13.428); /* rose-400 */
-    --background-footer: oklch(0 0 0); /* black */
+    /* Dark theme variables */
+    --background: oklch(14.5% 0 0);
+    --foreground: oklch(98% 0 0);
+    --muted: oklch(20% 0 0);
+    --muted-foreground: oklch(70% 0 0);
+    --primary: oklch(71.2% 0.194 13.428);
+    --background-footer: oklch(0 0 0);
 }
+
+/* ===== Tailwind Theme Configuration ===== */
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
@@ -38,36 +50,39 @@ body::-webkit-scrollbar {
     --color-background-footer: var(--background-footer);
 }
 
-/* Smooth theme transitions */
-html {
-    color-scheme: light dark;
-    scroll-behavior: smooth;
-}
-
-/* Optimized theme transitions - only for color-related properties */
+/* ===== Theme Transition Styles ===== */
 .theme-transition {
     transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
         color 0.3s ease-in-out;
 }
 
-/* Use modern View Transitions API for theme switching */
+/* View Transitions API */
 @media (prefers-reduced-motion: no-preference) {
     :root {
         view-transition-name: root;
     }
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+/* ===== Component Styles ===== */
 @layer components {
+    /* Layout */
     .page-container {
         @apply max-w-xl lg:max-w-5xl mx-auto px-4 space-y-12 pb-16 md:pb-24 lg:pb-32;
     }
 
+    /* Spinners */
     .spinner {
         margin: 3.2rem auto 1.6rem;
         width: 60px;
         aspect-ratio: 1;
         border-radius: 50%;
-        border: 8px solid theme("colors.blue.600");
+        border: 8px solid var(--primary);
         border-right-color: transparent;
         animation: rotate 1s infinite linear;
     }
@@ -77,31 +92,15 @@ html {
         width: 20px;
         aspect-ratio: 1;
         border-radius: 50%;
-        border: 2px solid theme("colors.blue.600");
+        border: 2px solid var(--primary);
         border-right-color: transparent;
         animation: rotate 1s infinite linear;
     }
 
-    .dark .spinner,
-    .dark .spinner-mini {
-        border-color: theme("colors.blue.400");
-    }
-
+    /* Animations */
     @keyframes rotate {
         to {
             transform: rotate(1turn);
         }
     }
-}
-
-/* View transitions for smooth theme animations */
-::view-transition-old(root),
-::view-transition-new(root) {
-    animation: none;
-    mix-blend-mode: normal;
-}
-
-/* Ensure root has view-transition-name for theme transitions */
-:root {
-    view-transition-name: root;
 }

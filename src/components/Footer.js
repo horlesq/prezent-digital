@@ -13,9 +13,9 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="bg-neutral-50 dark:bg-black mt-auto px-4 sm:px-6 lg:px-8">
+        <footer className="bg-background-footer mt-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto py-8 px-4">
-                <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
+                <div className="flex flex-col md:flex-row justify-between items-start gap-8">
                     <div className="flex-1">
                         <div className="flex items-center gap-2 mb-4">
                             {/* Light mode logo */}
@@ -34,17 +34,17 @@ export default function Footer() {
                                 height={30}
                                 className="hidden dark:block"
                             />
-                            <span className="text-xl font-bold text-rose-600 dark:text-rose-400">
+                            <span className="text-xl font-bold text-primary">
                                 Prezent Digital
                             </span>
                         </div>
-                        <p className="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed max-w-md">
+                        <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
                             Crestem afaceri prin solutii digitale.
                         </p>
                     </div>
 
                     <div>
-                        <h3 className="text-rose-600 dark:text-rose-400 font-semibold text-sm mb-4">
+                        <h3 className="text-primary font-semibold text-sm mb-4">
                             Meniu Rapid
                         </h3>
                         <ul className="space-y-2">
@@ -52,7 +52,7 @@ export default function Footer() {
                                 <li key={link.href}>
                                     <Link
                                         href={link.href}
-                                        className="text-neutral-600 dark:text-neutral-300 hover:text-rose-600 dark:hover:text-rose-400 text-sm transition-colors"
+                                        className="text-muted-foreground hover:text-primary text-sm transition-colors"
                                     >
                                         {link.label}
                                     </Link>
@@ -62,22 +62,22 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-neutral-200 dark:border-neutral-800">
+                <div className="pt-6 mt-6 border-t border-muted">
                     <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-                        <p className="text-neutral-500 dark:text-neutral-400 text-xs">
-                            © {new Date().getFullYear()} prezent.digital All
+                        <p className="text-muted-foreground text-xs">
+                            © {new Date().getFullYear()} Prezent Digital All
                             rights reserved.
                         </p>
                         <div className="flex items-center gap-4">
                             <Link
                                 href="/privacy-policy"
-                                className="text-neutral-500 dark:text-neutral-400 hover:text-rose-600 dark:hover:text-rose-400 text-xs transition-colors"
+                                className="text-muted-foreground hover:text-primary text-xs transition-colors"
                             >
                                 Privacy Policy
                             </Link>
                             <Link
                                 href="/terms-of-service"
-                                className="text-neutral-500 dark:text-neutral-400 hover:text-rose-600 dark:hover:text-rose-400 text-xs transition-colors"
+                                className="text-muted-foreground hover:text-primary text-xs transition-colors"
                             >
                                 Terms of Service
                             </Link>
@@ -89,7 +89,7 @@ export default function Footer() {
                             href="https://facebook.com/prezentdigital"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-neutral-500 dark:text-neutral-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors"
+                            className="text-muted-foreground hover:text-primary transition-colors"
                             aria-label="Facebook"
                         >
                             <Facebook className="h-5 w-5" />
@@ -98,7 +98,7 @@ export default function Footer() {
                             href="https://instagram.com/prezentdigital"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-neutral-500 dark:text-neutral-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors"
+                            className="text-muted-foreground hover:text-primary transition-colors"
                             aria-label="Instagram"
                         >
                             <Instagram className="h-5 w-5" />
@@ -107,7 +107,7 @@ export default function Footer() {
                             href="https://tiktok.com/@prezentdigital"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-neutral-500 dark:text-neutral-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors"
+                            className="text-muted-foreground hover:text-primary transition-colors"
                             aria-label="TikTok"
                         >
                             <svg
@@ -122,7 +122,7 @@ export default function Footer() {
                             href="https://linkedin.com/company/prezentdigital"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-neutral-500 dark:text-neutral-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors"
+                            className="text-muted-foreground hover:text-primary transition-colors"
                             aria-label="LinkedIn"
                         >
                             <Linkedin className="h-5 w-5" />

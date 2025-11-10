@@ -74,7 +74,6 @@ const ThemeSwitch = ({ className, size = "default" }) => {
                 "relative flex items-center justify-center rounded-full",
                 "transition-all duration-200",
                 "hover:-translate-y-0.5 hover:scale-110",
-
                 "active:scale-95",
                 "group",
                 className
@@ -92,7 +91,7 @@ const ThemeSwitch = ({ className, size = "default" }) => {
                 <Sun
                     className={cn(
                         iconSize,
-                        "text-yellow-500 dark:text-yellow-400",
+                        "text-foreground",
                         "transition-all duration-200",
                         "group-hover:rotate-90"
                     )}
@@ -101,7 +100,7 @@ const ThemeSwitch = ({ className, size = "default" }) => {
                 <Moon
                     className={cn(
                         iconSize,
-                        "text-neutral-700 dark:text-neutral-300",
+                        "text-foreground",
                         "transition-all duration-200",
                         "group-hover:rotate-12"
                     )}
