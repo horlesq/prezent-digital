@@ -24,7 +24,7 @@ function StackItem({ Icon, name, iconSize = 40 }) {
             <div className="flex items-center justify-center shrink-0 text-foreground">
                 <Icon style={{ width: iconSize, height: iconSize }} />
             </div>
-            <span className="text-sm md:text-base font-medium text-foreground whitespace-nowrap">
+            <span className="text-sm md:text-base font-medium text-foreground whitespace-nowrap hidden md:inline">
                 {name}
             </span>
         </div>
@@ -66,7 +66,7 @@ export default function TechCarousel({
             className="pt-10"
             aria-label="Technology carousel section"
         >
-            <div className="max-w-4xl mx-auto text-center px-4">
+            <div className="max-w-5xl mx-auto text-center px-4">
                 <h3 className="text-lg md:text-2xl font-semibold text-foreground">
                     {headerText}
                 </h3>
@@ -78,6 +78,7 @@ export default function TechCarousel({
                         autoFill
                         gradient
                         gradientColor={gradientColor}
+                        gradientWidth={100}
                         direction="right"
                         speed={speed}
                         className="py-4"
