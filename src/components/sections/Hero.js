@@ -42,7 +42,7 @@ export default function HeroSection() {
                     >
                         <Sparkles className="w-4 h-4 text-rose-600 dark:text-rose-400" />
                         <span className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-                            Transformare Digitală Completă
+                            Soluții Web Personalizate
                         </span>
                     </motion.div>
 
@@ -63,9 +63,10 @@ export default function HeroSection() {
                             </span>
                         </h1>
                         <p className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed">
-                            Platformă pentru a ajuta la digitalizarea
-                            businessurilor. Transformăm viziuni în realitate
-                            digitală cu soluții web moderne și personalizate.
+                            Construim website-uri moderne și platforme digitale
+                            care transformă vizibilitatea online a businessului
+                            tău. De la idee la lansare, suntem partenerul tău în
+                            digitalizare.
                         </p>
                     </motion.div>
 
@@ -80,7 +81,7 @@ export default function HeroSection() {
                             href="/contact"
                             className="group relative px-8 py-4 bg-rose-600 hover:bg-rose-700 dark:bg-rose-500 dark:hover:bg-rose-600 text-white rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
                         >
-                            Începe Transformarea
+                            Pornește-ți proiectul acum
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </a>
                         <a
@@ -116,9 +117,9 @@ export default function HeroSection() {
                     </motion.div>
 
                     <TechCarousel
-                        speed={18} 
-                        iconSize={40} 
-                        headerText="Technologies powering our solutions"
+                        speed={18}
+                        iconSize={40}
+                        headerText="Tehnologii moderne care garantează performanță"
                         showNames={true}
                     />
                 </div>

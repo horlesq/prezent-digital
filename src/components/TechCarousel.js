@@ -7,12 +7,10 @@ import {
     SiNextdotjs,
     SiReact,
     SiTailwindcss,
-    SiFramer,
-    SiTypescript,
-    SiSass,
-    SiEslint,
-    SiPostcss,
-    SiNextra,
+    SiSupabase,
+    SiAdobeillustrator,
+    SiAdobephotoshop,
+    SiAdobepremierepro,
 } from "react-icons/si";
 
 /* small hook to detect tailwind dark class on <html> (updates live) */
@@ -81,25 +79,24 @@ function StackItem({ Icon, name, iconSize = 40 }) {
 export default function TechCarousel({
     speed = 18,
     iconSize = 40,
-    headerText = "Technologies powering our solutions",
+    headerText = "Tehnologii moderne pentru soluții de calitate",
     showNames = true,
 }) {
     const isDark = useIsDarkClass();
-    const darkColor = "#030712"; // tailwind neutral-950 (adjust if your config differs)
+    const darkColor = "#030712"; // tailwind neutral-950
     const lightColor = "#ffffff";
 
     const gradientColor = isDark ? darkColor : lightColor;
 
+    // Sorted: Development tools first, then Design tools
     const items = [
         { Icon: SiNextdotjs, name: "Next.js" },
         { Icon: SiReact, name: "React" },
         { Icon: SiTailwindcss, name: "Tailwind CSS" },
-        { Icon: SiFramer, name: "Framer Motion" },
-        { Icon: SiTypescript, name: "TypeScript" },
-        { Icon: SiSass, name: "Sass" },
-        { Icon: SiEslint, name: "ESLint" },
-        { Icon: SiPostcss, name: "PostCSS" },
-        { Icon: SiNextra, name: "Nextra" },
+        { Icon: SiSupabase, name: "Supabase" },
+        { Icon: SiAdobeillustrator, name: "Illustrator" },
+        { Icon: SiAdobephotoshop, name: "Photoshop" },
+        { Icon: SiAdobepremierepro, name: "Premiere Pro" },
     ];
 
     return (
@@ -125,7 +122,7 @@ export default function TechCarousel({
                         direction="right"
                         speed={speed}
                         className="py-4"
-                        style={{ overflow: "hidden" }} // extra safeguard
+                        style={{ overflow: "hidden" }}
                     >
                         <div role="list" className="flex items-center h-16">
                             {items.map((it, idx) => (
