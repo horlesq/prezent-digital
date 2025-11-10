@@ -24,16 +24,12 @@ export default async function RootLayout({ children }) {
         <html lang="en" suppressHydrationWarning>
             <head></head>
             <body
-                className={`${rubik.className} antialiased min-h-screen flex flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100`}
+                className={`${rubik.className} antialiased min-h-screen flex flex-col bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100`}
             >
                 <ThemeProvider>
                     <Header />
 
-                    <main className="flex-1 px-4 sm:px-6 lg:px-8 py-8">
-                        <div className="max-w-6xl mx-auto w-full">
-                            {children}
-                        </div>
-                    </main>
+                    {children}
 
                     <Footer />
                 </ThemeProvider>
