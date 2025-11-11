@@ -29,6 +29,7 @@ html {
 
     /* Default primary (for fallback, can be rose-600) */
     --primary: oklch(58.6% 0.253 17.585);
+    --background-footer: oklch(98.5% 0 0); /* neutral-50 */
 
     /* Day-specific light theme primary colors */
     --primary-sun: oklch(58.6% 0.253 17.585); /* Rose-600 (Sunday) */
@@ -43,8 +44,8 @@ html {
 .dark {
     /* Dark theme variables */
     --background: oklch(14.5% 0 0); /* neutral-950 */
-    --foreground: oklch(98% 0 0); /* white */
-    --muted: oklch(26.9% 0 0); /* neutral-800 */
+    --foreground: oklch(98.5% 0 0); /* neutral-50 */
+    --muted: oklch(37.1% 0 0); /* neutral-700 */
     --muted-foreground: oklch(70.8% 0 0); /* neutral-400 */
 
     /* Default dark primary (for fallback, can be rose-400) */

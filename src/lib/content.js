@@ -18,7 +18,7 @@ export const CONTENT = {
         ],
     },
     techCarousel: {
-        header: "Tehnologii moderne care garantează performanță",
+        header: "Folosim tehnologii moderne care garantează performanță",
     },
 
     nav: {

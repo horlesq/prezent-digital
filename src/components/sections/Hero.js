@@ -61,7 +61,7 @@ export default function HeroSection() {
                     >
                         <a
                             href="/contact"
-                            className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+                            className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-primary hover:bg-primary/90 text-background rounded-xl font-bold text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
                         >
                             {hero.cta.primary}
                             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
@@ -86,7 +86,7 @@ export default function HeroSection() {
                             return (
                                 <div
                                     key={idx}
-                                    className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-background/60 backdrop-blur-sm rounded-full border border-neutral-200/50 dark:border-neutral-800/50"
+                                    className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-background/60 backdrop-blur-sm rounded-full border border-muted"
                                 >
                                     <IconComponent className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary flex-shrink-0" />
                                     <span className="text-xs sm:text-sm font-medium text-foreground whitespace-nowrap">

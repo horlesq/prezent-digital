@@ -12,36 +12,20 @@ export default function Footer() {
     return (
         <footer className="bg-background-footer mt-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto py-8 px-4">
-                <div className="flex flex-col md:flex-row justify-between items-start gap-8">
-                    <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-4">
-                            {/* Light mode logo */}
-                            <Image
-                                src="/assets/logo-light.png"
-                                alt="logo"
-                                width={30}
-                                height={30}
-                                className="dark:hidden"
-                            />
-                            {/* Dark mode logo */}
-                            <Image
-                                src="/assets/logo-dark.png"
-                                alt="logo"
-                                width={30}
-                                height={30}
-                                className="hidden dark:block"
-                            />
-                            <span className="text-xl font-bold text-primary">
+                <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start gap-8">
+                    <div className="flex-1 text-center md:text-left">
+                        <div className="flex items-center gap-2 mb-4 justify-center md:justify-start">
+                            <span className="text-2xl font-black text-primary">
                                 {footer.companyName}
                             </span>
                         </div>
-                        <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
+                        <p className="text-muted-foreground text-sm leading-relaxed max-w-md mx-auto md:mx-0">
                             {footer.tagline}
                         </p>
                     </div>
 
-                    <div>
-                        <h3 className="text-primary font-semibold text-sm mb-2">
+                    <div className="text-center md:text-left">
+                        <h3 className="text-primary font-semibold text-md mb-2">
                             {footer.quickLinks}
                         </h3>
                         <ul className="space-y-1">
@@ -62,7 +46,7 @@ export default function Footer() {
                 <div className="pt-6 mt-6 border-t border-muted">
                     <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
                         <p className="text-muted-foreground text-xs">
-                            © {new Date().getFullYear()} {footer.companyName}{" "}
+                            © {new Date().getFullYear()} {footer.companyName}{" - "}
                             {footer.copyright}
                         </p>
                         <div className="flex items-center gap-4">

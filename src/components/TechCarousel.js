@@ -8,12 +8,10 @@ import {
     SiReact,
     SiTailwindcss,
     SiSupabase,
-    SiAdobeillustrator,
-    SiAdobephotoshop,
-    SiAdobepremierepro,
+    SiVercel,
+    SiTypescript,
 } from "react-icons/si";
 
-/* StackItem: fixed height, icon + name horizontally */
 function StackItem({ Icon, name, iconSize = 40 }) {
     return (
         <div
@@ -31,31 +29,21 @@ function StackItem({ Icon, name, iconSize = 40 }) {
     );
 }
 
-/**
- * TechCarousel props:
- * - speed: marquee speed (lower = slower). default 18 for slower movement.
- * - iconSize: pixel size of each icon (default 40)
- * - headerText: string shown above the carousel
- * - showNames: whether to show technology names (default true)
- */
 export default function TechCarousel({
     speed = 18,
     iconSize = 40,
     headerText = "Tehnologii moderne pentru soluții de calitate",
     showNames = true,
 }) {
-    // Use the CSS variable directly
     const gradientColor = "var(--background)";
 
-    // Sorted: Development tools first, then Design tools
     const items = [
         { Icon: SiNextdotjs, name: "Next.js" },
         { Icon: SiReact, name: "React" },
         { Icon: SiTailwindcss, name: "Tailwind CSS" },
         { Icon: SiSupabase, name: "Supabase" },
-        { Icon: SiAdobeillustrator, name: "Illustrator" },
-        { Icon: SiAdobephotoshop, name: "Photoshop" },
-        { Icon: SiAdobepremierepro, name: "Premiere Pro" },
+        { Icon: SiTypescript, name: "TypeScript" },
+        { Icon: SiVercel, name: "Vercel" },
     ];
 
     return (
@@ -71,7 +59,6 @@ export default function TechCarousel({
                     {headerText}
                 </h3>
 
-                {/* Wrap the marquee in an overflow-hidden container to prevent scrollbars */}
                 <div className="w-full overflow-hidden no-scrollbar">
                     <Marquee
                         pauseOnHover
