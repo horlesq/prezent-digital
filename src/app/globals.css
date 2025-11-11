@@ -26,7 +26,18 @@ html {
     --foreground: oklch(14.5% 0 0); /* neutral-950 */
     --muted: oklch(92.2% 0 0); /* neutral-200 */
     --muted-foreground: oklch(43.9% 0 0); /* neutral-600 */
-    --primary: oklch(58.6% 0.253 17.585); /* rose-600 */
+
+    /* Default primary (for fallback, can be rose-600) */
+    --primary: oklch(58.6% 0.253 17.585);
+
+    /* Day-specific light theme primary colors */
+    --primary-sun: oklch(58.6% 0.253 17.585); /* Rose-600 (Sunday) */
+    --primary-mon: oklch(54.1% 0.281 293.009); /* Violet-600 (Monday) */
+    --primary-tue: oklch(51.1% 0.262 276.966); /* Indigo-600 (Tuesday) */
+    --primary-wed: oklch(59.6% 0.145 163.225); /* Emerald-600 (Wednesday) */
+    --primary-thu: oklch(64.8% 0.2 131.684); /* Lime-600 (Thursday) */
+    --primary-fri: oklch(66.6% 0.179 58.318); /* Amber-600 (Friday) */
+    --primary-sat: oklch(60.9% 0.126 221.723); /* Sky-600 (Saturday) */
 }
 
 .dark {
@@ -35,8 +46,19 @@ html {
     --foreground: oklch(98% 0 0); /* white */
     --muted: oklch(26.9% 0 0); /* neutral-800 */
     --muted-foreground: oklch(70.8% 0 0); /* neutral-400 */
-    --primary: oklch(71.2% 0.194 13.428); /* rose-400 */
+
+    /* Default dark primary (for fallback, can be rose-400) */
+    --primary: oklch(71.2% 0.194 13.428);
     --background-footer: oklch(0 0 0); /* black */
+
+    /* Day-specific dark theme primary colors */
+    --primary-sun: oklch(71.2% 0.194 13.428); /* Rose-400 (Sunday) */
+    --primary-mon: oklch(70.2% 0.183 293.541); /* Violet-400 (Monday) */
+    --primary-tue: oklch(67.3% 0.182 276.935); /* Indigo-400 (Tuesday) */
+    --primary-wed: oklch(76.5% 0.177 163.223); /* Emerald-400 (Wednesday) */
+    --primary-thu: oklch(84.1% 0.238 128.85); /* Lime-400 (Thursday) */
+    --primary-fri: oklch(82.8% 0.189 84.429); /* Amber-400 (Friday) */
+    --primary-sat: oklch(74.6% 0.16 232.661); /* Sky-400 (Saturday) */
 }
 
 /* ===== Tailwind Theme Configuration ===== */
