@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Sparkles, ArrowRight, Zap, Globe, TrendingUp } from "lucide-react";
 import TechCarousel from "../TechCarousel";
 import { CONTENT } from "@/lib/content";
+import ParticlesBackground from "../ParticlesBackground";
 
 const iconMap = {
     Zap,
@@ -16,6 +17,8 @@ export default function HeroSection() {
 
     return (
         <div className="relative flex items-center justify-center overflow-hidden bg-background min-h-[calc(100vh-80px)] md:min-h-0">
+            <ParticlesBackground />
+
             <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
                 <div className="text-center space-y-6 sm:space-y-8">
                     {/* Badge */}
