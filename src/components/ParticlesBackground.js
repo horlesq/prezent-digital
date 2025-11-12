@@ -56,7 +56,7 @@ export default function ParticlesBackground() {
                     },
                     distance: 120,
                     enable: true,
-                    opacity: resolvedTheme === "light" ? 0.2 : 0.1,
+                    opacity: resolvedTheme === "light" ? 0.4 : 0.3,
                     width: 1,
                 },
                 move: {
@@ -76,7 +76,7 @@ export default function ParticlesBackground() {
                     value: 60,
                 },
                 opacity: {
-                    value: resolvedTheme === "light" ? 0.2 : 0.15,
+                    value: resolvedTheme === "light" ? 0.4 : 0.3,
                 },
                 shape: {
                     type: "circle",
