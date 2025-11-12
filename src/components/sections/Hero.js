@@ -64,14 +64,14 @@ export default function HeroSection() {
                     >
                         <a
                             href="/contact"
-                            className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-primary hover:bg-primary/90 text-background rounded-xl font-bold text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+                            className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-background rounded-xl font-bold text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
                         >
                             {hero.cta.primary}
                             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                         </a>
                         <a
                             href="/portfolio"
-                            className="px-6 sm:px-8 py-3 sm:py-4 bg-background/80 hover:bg-background text-foreground rounded-xl font-bold text-base sm:text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 backdrop-blur-sm border border-muted"
+                            className="px-6 sm:px-8 py-3 sm:py-4 bg-background/80 hover:bg-background text-foreground rounded-xl font-bold text-base sm:text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 backdrop-blur-sm border-2 border-primary/30 hover:border-secondary/50"
                         >
                             {hero.cta.secondary}
                         </a>

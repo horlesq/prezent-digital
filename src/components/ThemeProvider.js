@@ -5,13 +5,18 @@ import { THEME_CONFIG } from "@/lib/theme-config";
 import { useEffect } from "react";
 
 /**
- * Helper to get the current day's primary color variable name
+ * Helper to get the current day's color variable name
  */
 const getDayPrimaryVariable = () => {
     // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
     const day = new Date().getDay();
     const days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
     return `--primary-${days[day]}`;
+};
+const getDaySecondaryVariable = () => {
+    const day = new Date().getDay();
+    const days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+    return `--secondary-${days[day]}`;
 };
 
 /**
@@ -22,15 +27,21 @@ export function ThemeProvider({ children, ...props }) {
     useEffect(() => {
         const root = document.documentElement;
         const dayPrimaryVariable = getDayPrimaryVariable();
+        const daySecondaryVariable = getDaySecondaryVariable();
 
         // 1. Read the correct day-specific variable value
         const primaryColorValue =
             getComputedStyle(root).getPropertyValue(dayPrimaryVariable);
+        const secondaryColorValue =
+            getComputedStyle(root).getPropertyValue(daySecondaryVariable);
 
         // 2. Set the generic --primary variable to the day's value
         // This is what Tailwind/your app reads for 'primary'
         if (primaryColorValue) {
             root.style.setProperty("--primary", primaryColorValue.trim());
+        }
+        if (secondaryColorValue) {
+            root.style.setProperty("--secondary", secondaryColorValue.trim());
         }
     }, []);
 

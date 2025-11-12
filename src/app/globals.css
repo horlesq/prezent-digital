@@ -39,6 +39,14 @@ html {
     --primary-thu: oklch(64.8% 0.2 131.684); /* Lime-600 (Thursday) */
     --primary-fri: oklch(66.6% 0.179 58.318); /* Amber-600 (Friday) */
     --primary-sat: oklch(60.9% 0.126 221.723); /* Sky-600 (Saturday) */
+
+    --secondary-sun: oklch(65.6% 0.241 354.308); /* Pink-500 (Sunday) */
+    --secondary-mon: oklch(62.7% 0.265 303.9); /* Purple-500 (Monday) */
+    --secondary-tue: oklch(62.3% 0.214 259.815); /* Blue-500 (Tuesday) */
+    --secondary-wed: oklch(70.4% 0.14 182.503); /* Teal-500 (Wednesday) */
+    --secondary-thu: oklch(72.3% 0.219 149.579); /* Green-500 (Thursday) */
+    --secondary-fri: oklch(70.5% 0.213 47.604); /* Orange-500 (Friday) */
+    --secondary-sat: oklch(62.3% 0.214 259.815); /* Blue-500 (Saturday) */
 }
 
 .dark {
@@ -69,6 +77,7 @@ html {
     --color-muted: var(--muted);
     --color-muted-foreground: var(--muted-foreground);
     --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
     --color-background-footer: var(--background-footer);
 }
 

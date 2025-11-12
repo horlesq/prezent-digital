@@ -1,6 +1,6 @@
 export const CONTENT = {
     hero: {
-        badge: "Soluții Web Personalizate",
+        badge: "Soluții Software Personalizate",
         heading: {
             gradient: "Creștem Afaceri",
             normal: "Prin Soluții Digitale",
