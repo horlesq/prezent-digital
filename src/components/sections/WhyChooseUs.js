@@ -2,46 +2,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const features = [
-    {
-        title: "Top Notch Design",
-        description:
-            "— We design great looking websites that stand out. We use the latest design trends and techniques to make your website look great.",
-    },
-    {
-        title: "Development",
-        description:
-            "— We build your website using the latest technologies and frameworks. We use the best tools to make sure your website is fast and secure.",
-    },
-    {
-        title: "Performance Optimized",
-        description:
-            "— We focus heavily on performance optimizations. Whether it's Image optimization or website load speed, we have got you covered.",
-    },
-    {
-        title: "Responsive Design",
-        description:
-            "— Your website will look amazing on any device. We make sure your website looks great on mobile, tablet, and desktop.",
-    },
-    {
-        title: "Search Engine Optimized",
-        description:
-            "— We make sure you get found on Google. We use the latest SEO techniques to make sure your website is optimized for search engines.",
-    },
-    {
-        title: "Contact Forms",
-        description:
-            "— We know that you want to get reached out. We make sure you get all the leads you need. We integrate your website with your favorite email marketing service.",
-    },
-    {
-        title: "Revisions",
-        description:
-            "— We make sure you are happy with the website. We provide revisions until you are happy with the website.",
-    },
-];
+import { CONTENT } from "@/lib/content";
 
 export default function WhyChooseUs() {
+    const { whyChooseUs } = CONTENT;
+
     return (
         <section className="py-16 sm:py-20 md:py-24 bg-background px-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto px-4">
@@ -55,14 +20,14 @@ export default function WhyChooseUs() {
                 >
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4">
                         <span className="bg-foreground bg-clip-text text-transparent">
-                            Why Choose Us?
+                            {whyChooseUs.title}
                         </span>
                     </h2>
                 </motion.div>
 
-                {/* Features List - Same Line */}
+                {/* Features List */}
                 <div className="space-y-6 sm:space-y-8">
-                    {features.map((feature, index) => (
+                    {whyChooseUs.features.map((feature, index) => (
                         <motion.div
                             key={feature.title}
                             initial={{ opacity: 0, x: -20 }}
