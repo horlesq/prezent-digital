@@ -10,6 +10,7 @@ import {
     SiSupabase,
     SiVercel,
     SiTypescript,
+    SiGit,
 } from "react-icons/si";
 
 function StackItem({ Icon, name, iconSize = 40 }) {
@@ -44,6 +45,7 @@ export default function TechCarousel({
         { Icon: SiSupabase, name: "Supabase" },
         { Icon: SiTypescript, name: "TypeScript" },
         { Icon: SiVercel, name: "Vercel" },
+        { Icon: SiGit, name: "Git" },
     ];
 
     return (

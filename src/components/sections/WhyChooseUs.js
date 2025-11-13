@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
                                 className="group flex gap-4 sm:gap-5 text-left"
                             >
                                 {/* Icon container with background */}
-                                <div className="flex-shrink-0">
+                                {/* <div className="flex-shrink-0">
                                     <motion.div
                                         whileHover={{ scale: 1.1, rotate: 5 }}
                                         transition={{
@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
                                     >
                                         <IconComponent className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
                                     </motion.div>
-                                </div>
+                                </div> */}
 
                                 {/* Content */}
                                 <div className="flex-1 pt-1">
