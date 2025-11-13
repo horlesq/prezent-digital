@@ -25,34 +25,40 @@ export const CONTENT = {
         title: "Avantajele Tale",
         features: [
             {
+                icon: "rocket",
                 title: "Design la Comandă",
                 description:
-                    " — 100% personalizat pentru brandul tău. Integrăm ultimele tendințe în design pentru un website modern si care arata bine.",
+                    " – 100% personalizat și responsive. Integrăm ultimele tendințe pentru un website modern care arată perfect pe orice dispozitiv.",
             },
             {
+                icon: "zap",
                 title: "Dezvoltare",
                 description:
-                    " — Construim software folosind cele mai noi tehnologii și framework-uri. Folosim cele mai bune instrumente pentru a ne asigura că aplicația ta este rapidă și sigură.",
+                    " – Construim software folosind cele mai noi tehnologii și framework-uri. Folosim cele mai bune instrumente pentru a ne asigura că aplicația ta este rapidă și sigură.",
             },
             {
+                icon: "trending",
                 title: "Performanță",
                 description:
-                    " — Ne concentrăm pe optimizările de performanță. Fie că este vorba de optimizarea imaginilor sau viteza de încărcare a website-ului.",
+                    " – Ne concentrăm pe optimizările de performanță. Fie că este vorba de optimizarea imaginilor sau viteza de încărcare a website-ului.",
             },
             {
-                title: "Design Responsiv",
-                description:
-                    " — Website-ul tău va arăta și funcționa perfect pe orice dispozitiv indiferent de mărimea ecranului.",
-            },
-            {
+                icon: "target",
                 title: "Optimizat SEO",
                 description:
-                    " — Ne asigurăm că ești găsit pe Google. Folosim cele mai noi tehnici SEO pentru a ne asigura că site-ul tău este optimizat pentru motoarele de căutare.",
+                    " – Ne asigurăm că ești găsit pe Google. Folosim cele mai noi tehnici SEO pentru a ne asigura că site-ul tău este optimizat pentru motoarele de căutare.",
             },
             {
+                icon: "users",
                 title: "Revizuiri",
                 description:
-                    " — Oferim revizuiri până când ești complet mulțumit. Nu plecăm până când produsul final este exact cum ți-l dorești.",
+                    " – Oferim revizuiri până când ești complet mulțumit. Nu plecăm până când produsul final este exact cum ți-l dorești.",
+            },
+            {
+                icon: "shield",
+                title: "Garanție",
+                description:
+                    " – Mentenanță gratuită în prima lună după lansare. Rezolvăm orice problemă tehnică și te sprijinim în adaptarea la noua platformă.",
             },
         ],
     },
