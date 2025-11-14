@@ -24,7 +24,7 @@ export default function WhyChooseUs() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="text-center mb-16 sm:mb-20"
+                    className="text-center mb-12 sm:mb-20"
                 >
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4">
                         <span className="bg-foreground bg-clip-text text-transparent">

@@ -16,7 +16,7 @@ export default function HeroSection() {
     const { hero } = CONTENT;
 
     return (
-        <div className="relative flex items-center justify-center overflow-hidden bg-background min-h-[calc(100vh-80px)] md:min-h-0">
+        <section className="relative flex items-center justify-center overflow-hidden bg-background md:min-h-0">
             <ParticlesBackground />
 
             <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
@@ -102,12 +102,12 @@ export default function HeroSection() {
 
                     <TechCarousel
                         speed={18}
-                        iconSize={40}
+                        iconSize={50}
                         headerText={CONTENT.techCarousel.header}
                         showNames={true}
                     />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
