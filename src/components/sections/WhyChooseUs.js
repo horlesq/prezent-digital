@@ -22,10 +22,13 @@ export default function WhyChooseUs() {
         setProgress(0);
     }, [activeIndex]);
 
-    // Auto-rotate through features with progress bar
+    // Auto-rotate through features with progress bar (desktop only)
     useEffect(() => {
-        const duration = 5000; // 5 seconds total per feature
-        const intervalTime = 50; // Update every 50ms
+        // Only auto-rotate on desktop
+        if (window.innerWidth < 1024) return;
+
+        const duration = 5000;
+        const intervalTime = 50;
         const increment = (intervalTime / duration) * 100;
 
         intervalRef.current = setInterval(() => {
@@ -33,10 +36,8 @@ export default function WhyChooseUs() {
                 const newProgress = prev + increment;
 
                 if (newProgress >= 100) {
-                    // Move to next feature when progress completes
                     const nextIndex =
                         (activeIndex + 1) % whyChooseUs.features.length;
-                    console.log("Next index will be:", nextIndex);
                     setActiveIndex(nextIndex);
                     return 0;
                 }
@@ -52,11 +53,9 @@ export default function WhyChooseUs() {
     }, [activeIndex, whyChooseUs.features.length]);
 
     const handleFeatureClick = (index) => {
-        // Reset progress and set active index
         setProgress(0);
         setActiveIndex(index);
 
-        // Clear and restart interval
         if (intervalRef.current) {
             clearInterval(intervalRef.current);
         }
@@ -84,7 +83,38 @@ export default function WhyChooseUs() {
                     </p>
                 </motion.div>
 
-                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                {/* Mobile Layout - Stacked vertically */}
+                <div className="md:hidden space-y-12 mt-12">
+                    {whyChooseUs.features.map((feature, index) => (
+                        <div key={feature.title} className="space-y-6">
+                            {/* Feature content */}
+                            <div className="space-y-3">
+                                <h3 className="text-xl font-bold text-foreground">
+                                    {feature.title}
+                                </h3>
+                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                    {feature.description}
+                                </p>
+                            </div>
+
+                            {/* Illustration */}
+                            <div className="flex justify-center">
+                                <div className="w-full max-w-xs">
+                                    <Image
+                                        src={illustrations[feature.key]}
+                                        alt={feature.title}
+                                        width={300}
+                                        height={300}
+                                        className="w-full h-auto object-contain"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Desktop Layout - Side by side with auto-rotate */}
+                <div className="hidden md:grid md:grid-cols-2 gap-8 lg:gap-12 items-center mt-12">
                     {/* Left side - Features list */}
                     <div className="space-y-6">
                         {whyChooseUs.features.map((feature, index) => {
@@ -112,21 +142,25 @@ export default function WhyChooseUs() {
                                     <div>
                                         <h3
                                             className={`
-                      text-lg sm:text-xl font-bold mb-1 transition-colors duration-300
-                      ${
-                          isActive
-                              ? "text-primary"
-                              : "text-foreground hover:text-primary"
-                      }
-                    `}
+                                                text-lg sm:text-xl font-bold mb-1 transition-colors duration-300
+                                                ${
+                                                    isActive
+                                                        ? "text-primary"
+                                                        : "text-foreground hover:text-primary"
+                                                }
+                                            `}
                                         >
                                             {feature.title}
                                         </h3>
                                         <p
                                             className={`
-                      text-sm sm:text-base leading-relaxed transition-all duration-300
-                      ${isActive ? "text-foreground" : "text-muted-foreground"}
-                    `}
+                                                text-sm sm:text-base leading-relaxed transition-all duration-300
+                                                ${
+                                                    isActive
+                                                        ? "text-foreground"
+                                                        : "text-muted-foreground"
+                                                }
+                                            `}
                                         >
                                             {feature.description}
                                         </p>
