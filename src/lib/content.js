@@ -22,43 +22,26 @@ export const CONTENT = {
     },
 
     whyChooseUs: {
-        title: "Avantajele Tale",
+        header: "Avantajele Tale",
+        description: "De ce să ne alegi pe noi pentru dezvoltarea platformei tale digitale?",
         features: [
             {
-                icon: "rocket",
-                title: "Design la Comandă",
+                key: "design",
+                title: "Design Unic și Modern",
                 description:
-                    " – 100% personalizat și responsive. Integrăm ultimele tendințe pentru un website modern care arată perfect pe orice dispozitiv.",
+                    "Creăm interfețe 100% personalizate, optimizate pentru orice dispozitiv. Punem accent pe un design intuitiv care transformă vizitatorii în clienți.",
             },
             {
-                icon: "zap",
-                title: "Dezvoltare",
+                key: "performance",
+                title: "Performanță și SEO",
                 description:
-                    " – Construim software folosind cele mai noi tehnologii și framework-uri. Folosim cele mai bune instrumente pentru a ne asigura că aplicația ta este rapidă și sigură.",
+                    "Construim site-uri rapide și optimizate pentru motoarele de căutare. Ne asigurăm că prezența ta online este vizibilă și performantă din prima zi.",
             },
             {
-                icon: "trending",
-                title: "Performanță",
+                key: "warranty",
+                title: "Suport și Garanție",
                 description:
-                    " – Ne concentrăm pe optimizările de performanță. Fie că este vorba de optimizarea imaginilor sau viteza de încărcare a website-ului.",
-            },
-            {
-                icon: "target",
-                title: "Optimizat SEO",
-                description:
-                    " – Ne asigurăm că ești găsit pe Google. Folosim cele mai noi tehnici SEO pentru a ne asigura că site-ul tău este optimizat pentru motoarele de căutare.",
-            },
-            {
-                icon: "users",
-                title: "Revizuiri",
-                description:
-                    " – Oferim revizuiri până când ești complet mulțumit. Nu plecăm până când produsul final este exact cum ți-l dorești.",
-            },
-            {
-                icon: "shield",
-                title: "Garanție",
-                description:
-                    " – Mentenanță gratuită în prima lună după lansare. Rezolvăm orice problemă tehnică și te sprijinim în adaptarea la noua platformă.",
+                    "Colaborarea noastră continuă și după lansare. Oferim garanție, mentenanță și suport tehnic pentru a asigura buna funcționare a proiectului tău.",
             },
         ],
     },
