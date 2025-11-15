@@ -27,21 +27,21 @@ export const CONTENT = {
         features: [
             {
                 key: "design",
-                title: "Design Unic și Modern",
+                title: "Design Unic și Responsive",
                 description:
-                    "Creăm interfețe 100% personalizate, optimizate pentru orice dispozitiv. Punem accent pe un design intuitiv care transformă vizitatorii în clienți.",
+                    "Creăm interfețe 100% personalizate, adaptate pentru orice dispozitiv indiferent de dimensiunea ecranului.",
             },
             {
                 key: "performance",
                 title: "Performanță și SEO",
                 description:
-                    "Construim site-uri rapide și optimizate pentru motoarele de căutare. Ne asigurăm că prezența ta online este vizibilă și performantă din prima zi.",
+                    "Dezvoltam website-uri optimizate atat pentru viteză cât și pentru motoarele de căutare, asigurându-ne că afacerea ta este ușor de găsit online.",
             },
             {
                 key: "warranty",
                 title: "Suport și Garanție",
                 description:
-                    "Colaborarea noastră continuă și după lansare. Oferim garanție, mentenanță și suport tehnic pentru a asigura buna funcționare a proiectului tău.",
+                    "Colaborarea noastră continuă și după lansare. Oferim garanție, mentenanță și suport tehnic gratiuit in primele 30 de zile.",
             },
         ],
     },
@@ -104,7 +104,7 @@ export const CONTENT = {
             { name: "Acasă", link: "/" },
             { name: "Servicii", link: "/servicii" },
             { name: "Portofoliu", link: "/portofoliu" },
-            { name: "Despre", link: "/despre" },
+            // { name: "Despre", link: "/despre" },
             { name: "Contact", link: "/contact" },
         ],
     },
@@ -118,7 +118,7 @@ export const CONTENT = {
             { href: "/", label: "Acasă" },
             { href: "/servicii", label: "Servicii" },
             { href: "/portofoliu", label: "Portofoliu" },
-            { href: "/despre", label: "Despre" },
+            // { href: "/despre", label: "Despre" },
             { href: "/contact", label: "Contact" },
         ],
         copyright: "Toate drepturile rezervate.",
