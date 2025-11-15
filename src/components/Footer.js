@@ -10,7 +10,7 @@ export default function Footer() {
     const { footer } = CONTENT;
 
     return (
-        <footer className="bg-background-footer mt-auto px-4 sm:px-6 lg:px-8">
+        <footer className="bg-background-footer mt-auto px-4 sm:px-6 lg:px-8  z-20 ">
             <div className="max-w-5xl mx-auto py-8 px-4">
                 <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start gap-8">
                     <div className="flex-1 text-center md:text-left">

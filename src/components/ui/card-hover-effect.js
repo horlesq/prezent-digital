@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 
 import { useState } from "react";
+import React from "react";
 
 export const HoverEffect = ({
   items,
@@ -18,7 +19,7 @@ export const HoverEffect = ({
           className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}>
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
             {hoveredIndex === idx && (
               <motion.span
                 className="absolute inset-0 h-full w-full bg-muted block rounded-3xl z-0"
@@ -30,12 +31,19 @@ export const HoverEffect = ({
                 }}
                 exit={{
                   opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
+                  transition: { duration: 0.15 },
                 }} />
             )}
           </AnimatePresence>
           <a href={item?.link} className="relative z-10 block h-full w-full">
             <Card>
+              {item.icon && (
+                <div className="absolute top-0 right-0 opacity-50 text-muted-foreground group-hover:text-primary group-hover:opacity-80 transition-all">
+                  {React.cloneElement(item.icon.props.children, { 
+                    className: "w-12 h-12" 
+                  })}
+                </div>
+              )}
               <CardTitle>{item.title}</CardTitle>
               <CardDescription>{item.description}</CardDescription>
             </Card>
@@ -53,7 +61,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-card border border-muted/40 group-hover:border-primary/50 relative z-20 transition-all duration-300",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-card border-2 border-muted/40 group-hover:border-primary/50 relative z-20 transition-all duration-300",
         className
       )}>
       <div className="relative z-50">
