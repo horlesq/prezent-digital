@@ -2,8 +2,8 @@ export const CONTENT = {
     hero: {
         badge: "Soluții Software Personalizate",
         heading: {
-            gradient: "Creștem Afaceri",
-            normal: "Prin Soluții Digitale",
+            gradient: "Creștem Prezența",
+            normal: "Digitală a Afacerii Tale",
         },
         description:
             "Construim website-uri moderne și platforme digitale care transformă vizibilitatea online a businessului tău. De la idee la lansare, suntem partenerul tău în digitalizare.",
@@ -64,9 +64,9 @@ export const CONTENT = {
     },
 
     servicesOverview: {
-        header: "Soluții complete, de la A la Z!",
+        header: "Soluții Software Complete",
         description:
-            "Ne ocupăm de toate aspectele dezvoltării: de la design și codare la implementare și mentenanță, pentru a lansa platforma ta digitală cu succes!",
+            "Ne ocupăm de toate aspectele dezvoltării: de la design și codare la implementare și mentenanță.",
         items: [
             {
                 key: "development",
@@ -102,7 +102,7 @@ export const CONTENT = {
                 key: "other",
                 title: "Soluții Personalizate",
                 description:
-                    "Fie că ai nevoie de un magazin online (eCommerce), un dashboard analitic sau un portal de management, putem construi orice soluție digitală.",
+                    "Fie că ai nevoie de un magazin online, un dashboard analitic sau un portal de management, putem construi orice soluție digitală.",
             },
         ],
     },

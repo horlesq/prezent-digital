@@ -16,7 +16,7 @@ import { CONTENT } from "@/lib/content";
 const iconMap = {
     development: RiCodeSSlashLine,
     design: RiBrushLine,
-    hosting: RiCloudLine ,
+    hosting: RiCloudLine,
     maintenance: RiSettings5Line,
     fullstack: RiStackLine,
     other: RiRocketLine,
@@ -24,37 +24,17 @@ const iconMap = {
 
 export default function ServicesOverview() {
     // Destructure the new object name
-    const { servicesOverview } = CONTENT; 
-    
-    // Get the items array from the servicesOverview object
-    const SERVICES = servicesOverview.items || [];
-
-    // inject icon ReactNodes
-    const items = useMemo(
-        () =>
-            SERVICES.map((s) => {
-                const Icon = iconMap[s.key] || RiRocketLine;
-                return {
-                    ...s,
-                    icon: (
-                        <span className="text-zinc-600 dark:text-zinc-200 size-[48px] mb-[20px] text-[24px] bg-[#e3e3e5] dark:bg-[#1e1e20] flex items-center justify-center rounded-[6px]">
-                            <Icon className="w-5 h-5" />
-                        </span>
-                    ),
-                };
-            }),
-        [SERVICES]
-    );
+    const { servicesOverview } = CONTENT;
 
     return (
-        <section className="py-16 sm:py-20 md:py-24 bg-background px-4 sm:px-6 lg:px-8">
+        <section className="py-12 lg:py-16 bg-background px-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 14 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="text-center mb-10 sm:mb-16"
+                    className="text-center"
                 >
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-3">
                         <span className="bg-foreground bg-clip-text text-transparent">
@@ -67,7 +47,19 @@ export default function ServicesOverview() {
                 </motion.div>
 
                 <div className="flex justify-center w-full max-w-7xl">
-                    <HoverEffect items={items} />
+                    <HoverEffect
+                        items={servicesOverview.items.map((service) => {
+                            const Icon = iconMap[service.key] || RiRocketLine;
+                            return {
+                                ...service,
+                                icon: (
+                                    <span className="size-12 mb-5 text-2xl bg-muted flex items-center justify-center rounded-md">
+                                        <Icon className="w-5 h-5" />
+                                    </span>
+                                ),
+                            };
+                        })}
+                    />
                 </div>
             </div>
         </section>
